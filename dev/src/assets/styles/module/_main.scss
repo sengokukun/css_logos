@@ -2,20 +2,21 @@
 	&__List {
 		display: flex;
 		flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 5rem;
+		justify-content: center;
+		margin-top: 5rem;
 	}
 
 	&__Item {
-    width: 30rem;
+		width: 30rem;
 		height: 30rem;
 		background-color: #eee;
 		border-radius: 0.3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    margin: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-sizing: border-box;
+		margin: 10px;
+    position: relative;
 	}
 }
 
@@ -23,27 +24,118 @@
 	width: 150px;
 	height: 150px;
 	box-shadow: 1px 4px 15px -5px #000;
-	position: relative;
-  perspective: 900px;
-  &--item01{
-    border: 4px solid #26d6fd;
-    background-color: #022731;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
+	perspective: 900px;
 
-.draw1{
-  color: #26d6fd;
-  font-size: 8rem;
-  font-weight: bold;
-  margin-top: -.7rem;
-}
-.draw2{
-  color: #26d6fd;
-  font-size: 7rem;
-  font-weight: bold;
-  margin-top:.3rem;
-  transform: translateX(-.4rem);
+	&--item01 {
+		border: 4px solid #26d6fd;
+		background-color: #022731;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    position: relative;
+
+		.draw1 {
+			color: #26d6fd;
+			font-size: 8rem;
+			font-weight: bold;
+			margin-top: -.7rem;
+		}
+
+		.draw2 {
+			color: #26d6fd;
+			font-size: 7rem;
+			font-weight: bold;
+			margin-top: 0.3rem;
+			transform: translateX(-.4rem);
+		}
+	}
+
+	&--item02 {
+		display: flex;
+		overflow: hidden;
+		flex-direction: column;
+    border-radius: 3%;
+
+		.drawBox {
+			width: 135%;
+			height: 105%;
+			display: flex;
+
+			&--01 {
+				transform: rotate(-15deg) translateX(-20%) translateY(-235%);
+			}
+
+			&--02 {
+				transform: rotate(-15deg) translateX(-13.5%) translateY(-35%);
+			}
+
+			&--03 {
+				transform: rotate(-15deg) translateX(-7%) translateY(28%);
+			}
+		}
+
+		.draw1 {
+			width: 130px;
+			height: 150px;
+			background-color: #2aa48f;
+		}
+
+		.draw2 {
+			width: 170px;
+			height: 150px;
+			background-color: #84d2df;
+		}
+
+		.draw3 {
+			width: 130px;
+			height: 150px;
+			background-color: #79972c;
+		}
+
+		.draw4 {
+			width: 100px;
+			height: 100px;
+			background-color: #4fc4a1;
+		}
+
+		.draw5 {
+			width: 130px;
+			height: 100px;
+			background-color: #f5f3f1;
+		}
+
+		.draw6 {
+			width: 100px;
+			height: 100px;
+			background-color: #ecb438;
+		}
+
+		.draw7 {
+			width: 130px;
+			height: 150px;
+			background-color: #3e133e;
+		}
+
+		.draw8 {
+			width: 170px;
+			height: 150px;
+			background-color: #e3206f;
+		}
+
+		.draw9 {
+			width: 130px;
+			height: 150px;
+			background-color: #d3161c;
+		}
+    .drawText{
+      margin-top: .2rem;
+      font-size: 9rem;
+      color: #5b3b57;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform:translateX(-50%) translateY(-50%);
+    }
+	}
 }
