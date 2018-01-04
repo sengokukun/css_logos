@@ -1,0 +1,45 @@
+.Logo {
+	&__List {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__Item {
+		width: calc(100%/5);
+		height: 30rem;
+		background-color: #eee;
+		border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+}
+
+.LogoDraw {
+	width: 200px;
+	height: 200px;
+	box-shadow: 1px 4px 15px -5px #000;
+	position: relative;
+  perspective: 900px;
+  &--item01{
+    border: 4px solid #26d6fd;
+    background-color: #022731;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.draw1{
+  color: #26d6fd;
+  font-size: 10rem;
+  font-weight: bold;
+  margin-top: -.7rem;
+}
+.draw2{
+  color: #26d6fd;
+  font-size: 9rem;
+  font-weight: bold;
+  margin-top:.3rem;
+  transform: translateX(-.4rem);
+}

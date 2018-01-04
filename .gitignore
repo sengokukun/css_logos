@@ -57,3 +57,16 @@ typings/
 # dotenv environment variables file
 .env
 
+node_modules/
+.sass-cashe/
+dist/
+dev/css
+dev/img/
+dev/js
+dev/font
+dev/*.html
+.git
+.DS_Store
+.idea/
+public/
+.htaccess

@@ -1,0 +1,47 @@
+// Break point
+@mixin breakpoint($point) {
+	@if $point == sp {
+		@media (min-width: 480px) {
+			@content;
+		}
+	}
+	@if $point == table {
+		@media (min-width: 769px) {
+			@content;
+		}
+	}
+	@if $point == full {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+}
+@mixin beforeafter {
+	content: "";
+	display: block;
+}
+@mixin clearfix {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+/* text */
+@mixin fts($fts, $lin: 24) {
+	$rem: $fts / 10;
+	$linS: $lin / $fts;
+	font-size: #{$fts}px;
+	font-size: #{$rem}rem;
+	line-height: $linS;
+}
+@mixin title($fts) {
+	font-size: $fts;
+	font-weight: bold;
+}
+
+/* opacity */
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	filter: alpha(opacity=($opacity * 100));
+}
+// 使い方 @include opacity(0.5);

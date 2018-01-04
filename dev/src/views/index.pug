@@ -1,0 +1,31 @@
+extend base/_layout
+append variables
+	//- Required
+	- const pageTitle= site.sample;
+	- const pageDescription= site.description;
+	- const pageKeywords= site.keywords;
+	- const key = ""
+	//- Optional
+	- const pageOgpTitle= "";
+	- const pageOgpImage= site.ogpImage
+	- const pageLang= "ja";
+	- const pageOgpType= "website";
+	//- Not modified
+	- const pageUrl= site.relativePath;
+
+block content
+	main
+		.Logo
+			.Logo__Inner
+				.Logo__List
+					.Logo__Item
+						.LogoDraw.LogoDraw--item01
+							.draw1
+								| P
+							.draw2
+								| s
+					.Logo__Item
+					.Logo__Item
+					.Logo__Item
+					.Logo__Item
+						

@@ -1,0 +1,73 @@
+extend base/_layout
+append variables
+	//- Required
+	- const pageTitle= "";
+	- const pageDescription= site.description;
+	- const pageKeywords= site.keywords;
+	- const key = ""
+	//- Optional
+	- const pageOgpTitle= "";
+	- const pageOgpImage= site.ogpImage
+	- const pageLang= "ja";
+	- const pageOgpType= "website";
+	//- Not modified
+	- const pageUrl= site.relativePath;
+
+block content
+	// 「//」でコメント
+	//- 「//-」でHTMLには見えないコメント
+	
+	.Sample
+		h1.Sample__Title
+			| ほげほげ
+		
+		//- 文字列は改行して「|」で
+		
+		p.Sample__Text
+			| これはじゅうもじです
+			br
+			| これはじゅうもじです
+		
+		p.Sample__Text
+			| これはじゅうもじです
+			span
+				| これはじゅうもじです
+		
+		nav#Sample
+			ul
+				li
+					a(href="#")
+						| リンク
+				li
+					a(href="#", target="_blank")
+						| 新規ウィンドウ
+
+		// fotEachサンプル
+
+		-
+			const sample = [
+				{
+					"link": "https://~~",
+					"title": "たいとるだよー",
+					"class":['sample01']
+				},
+				{
+					"link": "https://~~",
+					"title": "たいとるだよー",
+					"class":['sample02']
+				},
+				{
+					"link": "https://~~",
+					"title": "たいとるだよー",
+					"class":['sample03']
+				}
+			];
+			
+		ul.class01.class02
+			each item in sample
+				li.sample
+					a(href=`${item.link}` , target="_blank")
+						span
+							| !{item.title}
+						span(class=`${item.class}`)
+		
