@@ -1,9 +1,11 @@
 .Logo {
+  &__Inner{
+    padding: 4rem 0;
+  }
 	&__List {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin-top: 5rem;
 	}
 
 	&__Item {
