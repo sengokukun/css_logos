@@ -68,5 +68,4 @@ dev/*.html
 .git
 .DS_Store
 .idea/
-public/
 .htaccess
