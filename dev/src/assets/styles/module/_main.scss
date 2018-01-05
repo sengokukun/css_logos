@@ -18,6 +18,13 @@
     width: 30rem;
     height: 30rem;
 	}
+  &__Text{
+    font-size: 1.6rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .LogoDraw {
