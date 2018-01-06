@@ -293,4 +293,51 @@
       margin-bottom: 30px;
     }
 	}
+
+  &--number05{
+    width: 160px;
+    height: 165px;
+    border-radius: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .draw1{
+      width: 60px;
+      height: 5px;
+      background-color: #8d9195;
+      margin-bottom: 13px;
+    }
+    .draw2{
+      width: 100px;
+      height: 5px;
+      background-color: #8d9195;
+      margin-bottom: 13px;
+    }
+    .draw3{
+      width: 50px;
+      height: 5px;
+      background-color: #8d9195;
+      margin-right: 30px;
+      margin-bottom: 13px;
+    }
+    .draw4{
+      width: 50px;
+      height: 5px;
+      background-color: #8d9195;
+      margin-left: 30px;
+      margin-bottom: 10px;
+    }
+    .draw5{
+      width: 100px;
+      height: 5px;
+      background-color: #8d9195;
+      margin-bottom: 13px;
+    }
+    .draw6{
+      width: 60px;
+      height: 5px;
+      background-color: #8d9195;
+    }
+  }
 }
