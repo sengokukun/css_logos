@@ -31,7 +31,7 @@ const gulp = require('gulp'),
 	combineMq = require('gulp-combine-mq'),
 paths = {
 	rootDir: 'dev',
-	dstrootDir: 'public',
+	dstrootDir: './',
 	srcDir: 'dev/img',
 	dstDir: 'public/img',
 	serverDir: 'localhost',
@@ -53,7 +53,7 @@ gulp.task('sass', () => {
 			minifier: true
 		}))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(paths.rootDir + '/css'));
+		.pipe(gulp.dest(paths.dstrootDir + 'css'));
 });
 
 gulp.task('watch-sass', function(cb) {
@@ -67,7 +67,7 @@ gulp.task('watch-sass', function(cb) {
 			loadPath: sassLoadPaths
 		}))
 		.pipe(notify('Sass compiled <%= file.relative %>'))
-		.pipe(gulp.dest(paths.rootDir + '/css'));
+		.pipe(gulp.dest(paths.dstrootDir + 'css'));
 });
 
 gulp.task('combineMq',  () =>  {
@@ -75,7 +75,7 @@ gulp.task('combineMq',  () =>  {
 		.pipe(combineMq({
 			beautify: false
 		}))
-		.pipe(gulp.dest(paths.rootDir + '/css'));
+		.pipe(gulp.dest(paths.dstrootDir + 'css'));
 });
 
 /*
@@ -93,7 +93,7 @@ gulp.task('browserify', () => {
 			entries: paths.rootDir + '/src/assets/js/main.js',
 			extensions: ['js']
 		},
-		dest: paths.rootDir + '/js',
+		dest: paths.dstrootDir + 'js',
 		filename: 'bundle.js'
 	};
 	const b = browserify(option.bundleOption)
@@ -129,7 +129,7 @@ gulp.task('pleeease', () => {
 		.pipe(plumber({
 			errorHandler: notify.onError('Error: <%= error.message %>')
 		}))
-		.pipe(gulp.dest(paths.rootDir + '/css'));
+		.pipe(gulp.dest(paths.dstrootDir + 'css'));
 });
 
 /*
@@ -151,7 +151,7 @@ gulp.task('imagemin', () => {
 			errorHandler: notify.onError('Error: <%= error.message %>')
 		}))
 		.pipe(imagemin(imageminOptions))
-		.pipe(gulp.dest(paths.dstDir));
+		.pipe(gulp.dest(paths.dstrootDir));
 });
 
 /*
@@ -187,7 +187,7 @@ gulp.task('pug', () => {
 		}, {
 			ext: '.html'
 		}))
-		.pipe(gulp.dest(paths.rootDir));
+		.pipe(gulp.dest(paths.dstrootDir));
 });
 
 /*
@@ -196,7 +196,7 @@ gulp.task('pug', () => {
 gulp.task('browser-sync', () => {
 	browserSync.init({
 		server: {
-			baseDir: paths.rootDir,
+			baseDir: paths.dstrootDir,
 			routes: {
 				"/node_modules": "node_modules"
 			}
@@ -218,10 +218,10 @@ gulp.task('setWatch', () => {
  */
 gulp.task('default', ['browser-sync'], () => {
 	const bsList = [
-		paths.rootDir + '/**/*.html',
-		paths.rootDir + '/**/*.php',
-		paths.rootDir + '/js/**/*.js',
-		paths.rootDir + '/css/*.css',
+		paths.dstrootDir + '/**/*.html',
+		paths.dstrootDir + '/**/*.php',
+		paths.dstrootDir + '/js/**/*.js',
+		paths.dstrootDir + '/css/*.css',
 	];
 	gulp.watch(paths.rootDir + '/src/views/**/*.pug', ['pug']);
 	gulp.watch(paths.rootDir + '/src/assets/styles/**/*.scss', ['sass']);
