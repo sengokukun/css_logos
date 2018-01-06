@@ -54,9 +54,24 @@
 //     /*Internet Explorer 5.xのみ*/
 // }
 
-// .gecko {
-// 	/*Firefox（全バージョン）とCaminoのみ*/
-// }
+.gecko {
+	/*Firefox（全バージョン）とCaminoのみ*/
+  .LogoDraw--number02{
+    .drawBox {
+      &--01 {
+        transform: rotate(-15deg) translateX(-12%) translateY(-78%);
+      }
+
+      &--02 {
+        transform: rotate(-15deg) translateX(4%) translateY(-113.1%);
+      }
+
+      &--03 {
+        transform: rotate(-15deg) translateX(20%) translateY(-86%);
+      }
+    }
+  }
+}
 // .ff2 {
 //     /*Firefox 2のみ*/
 // }
