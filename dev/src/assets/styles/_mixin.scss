@@ -5,8 +5,8 @@
 			@content;
 		}
 	}
-	@if $point == table {
-		@media (min-width: 769px) {
+	@if $point == pad {
+		@media (max-width: 769px) {
 			@content;
 		}
 	}
