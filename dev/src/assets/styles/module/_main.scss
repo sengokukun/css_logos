@@ -75,16 +75,16 @@
 			height: 105%;
 			display: flex;
 
-			&--01 {
-				transform: rotate(-15deg) translateX(-6vh) translateY(-5vh);
+      &--01 {
+				transform: rotate(-15deg) translateX(-20%) translateY(-235%);
 			}
 
 			&--02 {
-				transform: rotate(-15deg) translateX(-4.1vh) translateY(-2.5vh);
+				transform: rotate(-15deg) translateX(-13.5%) translateY(-35%);
 			}
 
 			&--03 {
-				transform: rotate(-15deg) translateX(-2.2vh) translateY(2vh);
+				transform: rotate(-15deg) translateX(-7%) translateY(28%);
 			}
 		}
 
