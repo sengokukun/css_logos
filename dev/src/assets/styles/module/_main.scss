@@ -19,6 +19,7 @@
 		position: relative;
 		width: 30rem;
 		height: 30rem;
+    color: #333;
 	}
 
 	&__Text {
@@ -78,11 +79,11 @@
 			}
 
 			&--02 {
-				transform: rotate(-15deg) translateX(-4.1vh) translateY(-3vh);
+				transform: rotate(-15deg) translateX(-4.1vh) translateY(-2.5vh);
 			}
 
 			&--03 {
-				transform: rotate(-15deg) translateX(-2.2vh) translateY(3vh);
+				transform: rotate(-15deg) translateX(-2.2vh) translateY(2vh);
 			}
 		}
 
